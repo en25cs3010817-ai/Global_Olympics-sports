@@ -1,0 +1,16 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Tableau Temporary Files
+*.twb.load
+*.tfl.load
+*.hyper.lock
+
+# Python & Node
+__pycache__/
+*.py[cod]
+node_modules/
+.vscode/
+.idea/

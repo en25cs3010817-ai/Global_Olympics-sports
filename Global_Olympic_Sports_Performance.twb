@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<workbook version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSortingZones />
+  </document-format-change-manifest>
+  <preferences />
+  <datasources>
+    <datasource caption='Country Performance &amp; Investment' inline='true' name='federated.country_perf' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='country_performance_investment' name='textscan.country'>
+            <connection class='textscan' directory='../data' filename='country_performance_investment.csv' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Country' datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='NOC' datatype='string' name='[NOC]' role='dimension' type='nominal' />
+      <column caption='Region' datatype='string' name='[Region]' role='dimension' type='nominal' />
+      <column caption='Total Medals' datatype='integer' name='[Total_Medals]' role='measure' type='quantitative' />
+      <column caption='Gold' datatype='integer' name='[Gold]' role='measure' type='quantitative' />
+      <column caption='Silver' datatype='integer' name='[Silver]' role='measure' type='quantitative' />
+      <column caption='Bronze' datatype='integer' name='[Bronze]' role='measure' type='quantitative' />
+      <column caption='Total Athletes' datatype='integer' name='[Total_Athletes]' role='measure' type='quantitative' />
+      <column caption='Sports Investment USD M' datatype='real' name='[Sports_Investment_USD_M]' role='measure' type='quantitative' />
+      <column caption='Medal Efficiency Pct' datatype='real' name='[Medal_Efficiency_Pct]' role='measure' type='quantitative' />
+      <column caption='Investment Per Medal M' datatype='real' name='[Investment_Per_Medal_M]' role='measure' type='quantitative' />
+    </datasource>
+    <datasource caption='Sports Summary' inline='true' name='federated.sports_summary' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='sports_summary' name='textscan.sports'>
+            <connection class='textscan' directory='../data' filename='sports_summary.csv' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Sport Category' datatype='string' name='[Sport_Category]' role='dimension' type='nominal' />
+      <column caption='Type' datatype='string' name='[Type]' role='dimension' type='nominal' />
+      <column caption='Total Athletes' datatype='integer' name='[Total_Athletes]' role='measure' type='quantitative' />
+      <column caption='Total Medals' datatype='integer' name='[Total_Medals]' role='measure' type='quantitative' />
+      <column caption='Avg Medals Per Athlete' datatype='real' name='[Avg_Medals_Per_Athlete]' role='measure' type='quantitative' />
+    </datasource>
+    <datasource caption='Regional Investment' inline='true' name='federated.regional_inv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='regional_investment' name='textscan.regional'>
+            <connection class='textscan' directory='../data' filename='regional_investment.csv' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Region' datatype='string' name='[Region]' role='dimension' type='nominal' />
+      <column caption='Total Medals' datatype='integer' name='[Total_Medals]' role='measure' type='quantitative' />
+      <column caption='Sports Investment USD M' datatype='real' name='[Sports_Investment_USD_M]' role='measure' type='quantitative' />
+      <column caption='Avg Medal Efficiency Pct' datatype='real' name='[Avg_Medal_Efficiency_Pct]' role='measure' type='quantitative' />
+    </datasource>
+    <datasource caption='Timeline (1992-2026)' inline='true' name='federated.timeline' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='olympic_editions_timeline' name='textscan.timeline'>
+            <connection class='textscan' directory='../data' filename='olympic_editions_timeline.csv' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Year' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+      <column caption='Season' datatype='string' name='[Season]' role='dimension' type='nominal' />
+      <column caption='Host City' datatype='string' name='[Host_City]' role='dimension' type='nominal' />
+      <column caption='Host Country' datatype='string' name='[Host_Country]' role='dimension' type='nominal' />
+      <column caption='Total Events' datatype='integer' name='[Total_Events]' role='measure' type='quantitative' />
+      <column caption='Total Medals Awarded' datatype='integer' name='[Total_Medals_Awarded]' role='measure' type='quantitative' />
+    </datasource>
+    <datasource caption='Host Nation Performance' inline='true' name='federated.hosts' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='host_nation_performance' name='textscan.hosts'>
+            <connection class='textscan' directory='../data' filename='host_nation_performance.csv' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Host Country' datatype='string' name='[Host_Country]' role='dimension' type='nominal' />
+      <column caption='Host Edition' datatype='string' name='[Host_Edition]' role='dimension' type='nominal' />
+      <column caption='Total Host Medals' datatype='integer' name='[Total_Host_Medals]' role='measure' type='quantitative' />
+      <column caption='Gold' datatype='integer' name='[Gold]' role='measure' type='quantitative' />
+      <column caption='Silver' datatype='integer' name='[Silver]' role='measure' type='quantitative' />
+      <column caption='Bronze' datatype='integer' name='[Bronze]' role='measure' type='quantitative' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Avg Medals per Athlete by Sport'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sports Summary' name='federated.sports_summary' />
+          </datasources>
+          <datasource-dependencies datasource='federated.sports_summary'>
+            <column caption='Avg Medals Per Athlete' datatype='real' name='[Avg_Medals_Per_Athlete]' role='measure' type='quantitative' />
+            <column caption='Sport Category' datatype='string' name='[Sport_Category]' role='dimension' type='nominal' />
+            <column-instance column='[Sport_Category]' derivation='None' name='[none:Sport_Category:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Avg_Medals_Per_Athlete]' derivation='Sum' name='[sum:Avg_Medals_Per_Athlete:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <rows>[federated.sports_summary].[none:Sport_Category:nk]</rows>
+        <cols>[federated.sports_summary].[sum:Avg_Medals_Per_Athlete:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Global Performance Metrics by Country'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Country Performance &amp; Investment' name='federated.country_perf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.country_perf'>
+            <column caption='Country' datatype='string' name='[Country]' role='dimension' type='nominal' />
+            <column caption='Total Medals' datatype='integer' name='[Total_Medals]' role='measure' type='quantitative' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Medals]' derivation='Sum' name='[sum:Total_Medals:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <rows>[federated.country_perf].[none:Country:nk]</rows>
+        <cols>[federated.country_perf].[sum:Total_Medals:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Investment vs Medal Performance'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Country Performance &amp; Investment' name='federated.country_perf' />
+          </datasources>
+          <datasource-dependencies datasource='federated.country_perf'>
+            <column caption='Country' datatype='string' name='[Country]' role='dimension' type='nominal' />
+            <column caption='Sports Investment USD M' datatype='real' name='[Sports_Investment_USD_M]' role='measure' type='quantitative' />
+            <column caption='Total Medals' datatype='integer' name='[Total_Medals]' role='measure' type='quantitative' />
+            <column-instance column='[Sports_Investment_USD_M]' derivation='Sum' name='[sum:Sports_Investment_USD_M:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total_Medals]' derivation='Sum' name='[sum:Total_Medals:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <rows>[federated.country_perf].[sum:Total_Medals:qk]</rows>
+        <cols>[federated.country_perf].[sum:Sports_Investment_USD_M:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Regional Efficiency Percentage'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Regional Investment' name='federated.regional_inv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.regional_inv'>
+            <column caption='Region' datatype='string' name='[Region]' role='dimension' type='nominal' />
+            <column caption='Avg Medal Efficiency Pct' datatype='real' name='[Avg_Medal_Efficiency_Pct]' role='measure' type='quantitative' />
+            <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Avg_Medal_Efficiency_Pct]' derivation='Sum' name='[sum:Avg_Medal_Efficiency_Pct:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <rows>[federated.regional_inv].[none:Region:nk]</rows>
+        <cols>[federated.regional_inv].[sum:Avg_Medal_Efficiency_Pct:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Trend of Medals Awarded Over Years'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Timeline (1992-2026)' name='federated.timeline' />
+          </datasources>
+          <datasource-dependencies datasource='federated.timeline'>
+            <column caption='Year' datatype='integer' name='[Year]' role='dimension' type='quantitative' />
+            <column caption='Total Medals Awarded' datatype='integer' name='[Total_Medals_Awarded]' role='measure' type='quantitative' />
+            <column-instance column='[Year]' derivation='None' name='[none:Year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total_Medals_Awarded]' derivation='Sum' name='[sum:Total_Medals_Awarded:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <rows>[federated.timeline].[sum:Total_Medals_Awarded:qk]</rows>
+        <cols>[federated.timeline].[none:Year:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Comparing Medal Totals Across Olympic Hosts'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Host Nation Performance' name='federated.hosts' />
+          </datasources>
+          <datasource-dependencies datasource='federated.hosts'>
+            <column caption='Host Country' datatype='string' name='[Host_Country]' role='dimension' type='nominal' />
+            <column caption='Total Host Medals' datatype='integer' name='[Total_Host_Medals]' role='measure' type='quantitative' />
+            <column-instance column='[Host_Country]' derivation='None' name='[none:Host_Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Host_Medals]' derivation='Sum' name='[sum:Total_Host_Medals:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <rows>[federated.hosts].[none:Host_Country:nk]</rows>
+        <cols>[federated.hosts].[sum:Total_Host_Medals:qk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1 - Olympic Performance &amp; Athlete Trends'>
+      <style />
+      <size maxheight='900' maxwidth='1440' minheight='900' minwidth='1440' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='1' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='48000' id='2' name='Avg Medals per Athlete by Sport' w='48000' x='1000' y='1000' />
+          <zone h='48000' id='3' name='Global Performance Metrics by Country' w='48000' x='51000' y='1000' />
+          <zone h='48000' id='4' name='Trend of Medals Awarded Over Years' w='98000' x='1000' y='51000' />
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Dashboard 2 - Olympic Performance &amp; Regional Efficiency'>
+      <style />
+      <size maxheight='900' maxwidth='1440' minheight='900' minwidth='1440' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='10' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='48000' id='11' name='Investment vs Medal Performance' w='48000' x='1000' y='1000' />
+          <zone h='48000' id='12' name='Regional Efficiency Percentage' w='48000' x='51000' y='1000' />
+          <zone h='48000' id='13' name='Comparing Medal Totals Across Olympic Hosts' w='98000' x='1000' y='51000' />
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows>
+    <window class='dashboard' maximized='true' name='Dashboard 1 - Olympic Performance &amp; Athlete Trends'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+    <window class='dashboard' name='Dashboard 2 - Olympic Performance &amp; Regional Efficiency'>
+      <viewpoints />
+      <active id='-1' />
+    </window>
+  </windows>
+</workbook>

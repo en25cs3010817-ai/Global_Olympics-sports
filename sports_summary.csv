@@ -1,0 +1,51 @@
+Sport_Category,Type,Total_Athletes,Total_Medals,Avg_Medals_Per_Athlete
+Rowing,Summer,500,3458,6.916
+Shooting,Summer,300,2019,6.731
+Canoeing & Kayak,Summer,350,2184,6.24
+Track Cycling,Summer,420,2436,5.8
+Speed Skating,Winter,280,1568,5.6
+Gymnastics,Summer,550,2860,5.2
+Swimming,Summer,900,4500,5.0
+Alpine Skiing,Winter,360,1620,4.5
+Weightlifting,Summer,400,1720,4.3
+Fencing,Summer,450,1845,4.1
+Judo,Summer,480,1824,3.8
+Biathlon,Winter,320,1152,3.6
+Athletics,Summer,1800,5760,3.2
+Wrestling,Summer,520,1560,3.0
+Equestrian,Summer,310,868,2.8
+Figure Skating,Winter,220,572,2.6
+Archery,Summer,250,625,2.5
+Cross-Country Skiing,Winter,400,960,2.4
+Snowboard,Winter,300,690,2.3
+Boxing,Summer,580,1276,2.2
+Taekwondo,Summer,280,560,2.0
+Badminton,Summer,300,570,1.9
+Table Tennis,Summer,310,558,1.8
+Triathlon,Summer,210,336,1.6
+Sailing,Summer,450,675,1.5
+Bobsleigh,Winter,240,336,1.4
+Curling,Winter,200,260,1.3
+Ice Hockey,Winter,450,540,1.2
+Luge,Winter,180,198,1.1
+Skeleton,Winter,120,120,1.0
+Volleyball,Summer,500,480,0.96
+Basketball,Summer,480,432,0.9
+Football,Summer,600,480,0.8
+Handball,Summer,450,360,0.8
+Hockey,Summer,480,360,0.75
+Water Polo,Summer,320,224,0.7
+Rugby Sevens,Summer,280,168,0.6
+Modern Pentathlon,Summer,150,75,0.5
+Surfing,Summer,80,36,0.45
+Skateboarding,Summer,90,36,0.4
+Sport Climbing,Summer,80,30,0.375
+Karate,Summer,80,28,0.35
+Freestyle Skiing,Winter,250,85,0.34
+Ski Jumping,Winter,220,70,0.318
+Short Track,Winter,200,60,0.3
+Nordic Combined,Winter,120,35,0.292
+Baseball/Softball,Summer,300,75,0.25
+Golf,Summer,120,24,0.2
+Tennis,Summer,220,40,0.182
+Ski Mountaineering,Winter,60,9,0.15

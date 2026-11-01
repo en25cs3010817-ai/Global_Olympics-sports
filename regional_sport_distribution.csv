@@ -1,0 +1,51 @@
+Sport_Category,Region,Medals_Won,Regional_Share_Pct
+Rowing,Europe/Asia,2628,76.0
+Rowing,Oceania,415,12.0
+Rowing,North America,345,10.0
+Rowing,South America,45,1.3
+Rowing,Africa,25,0.7
+Shooting,Europe/Asia,1575,78.0
+Shooting,North America,242,12.0
+Shooting,Oceania,81,4.0
+Shooting,South America,61,3.0
+Shooting,Africa,60,3.0
+Athletics,Europe/Asia,2592,45.0
+Athletics,North America,1613,28.0
+Athletics,Africa,979,17.0
+Athletics,Oceania,346,6.0
+Athletics,South America,230,4.0
+Swimming,North America,2025,45.0
+Swimming,Oceania,1260,28.0
+Swimming,Europe/Asia,1080,24.0
+Swimming,South America,90,2.0
+Swimming,Africa,45,1.0
+Canoeing & Kayak,Europe/Asia,1856,85.0
+Canoeing & Kayak,Oceania,175,8.0
+Canoeing & Kayak,North America,109,5.0
+Canoeing & Kayak,South America,33,1.5
+Canoeing & Kayak,Africa,11,0.5
+Speed Skating,Europe/Asia,1176,75.0
+Speed Skating,North America,392,25.0
+Speed Skating,Oceania,0,0.0
+Speed Skating,South America,0,0.0
+Speed Skating,Africa,0,0.0
+Gymnastics,Europe/Asia,2145,75.0
+Gymnastics,North America,543,19.0
+Gymnastics,South America,114,4.0
+Gymnastics,Oceania,43,1.5
+Gymnastics,Africa,15,0.5
+Combat Sports,Europe/Asia,3780,72.0
+Combat Sports,North America,578,11.0
+Combat Sports,South America,420,8.0
+Combat Sports,Africa,367,7.0
+Combat Sports,Oceania,105,2.0
+Winter Snow Sports,Europe/Asia,3300,75.0
+Winter Snow Sports,North America,924,21.0
+Winter Snow Sports,Oceania,110,2.5
+Winter Snow Sports,South America,22,0.5
+Winter Snow Sports,Africa,0,0.0
+Team Ball Sports,Europe/Asia,1980,55.0
+Team Ball Sports,North America,900,25.0
+Team Ball Sports,South America,432,12.0
+Team Ball Sports,Oceania,216,6.0
+Team Ball Sports,Africa,72,2.0
